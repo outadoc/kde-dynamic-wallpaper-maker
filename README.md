@@ -1,8 +1,10 @@
-# Dynamic Wallpaper Creator
+# KDE Dynamic Wallpaper Creator
 
 KDE Plasma supports dynamic wallpapers that switch between a light and a dark image to match your color scheme, but it has no built-in way to make one from your own images. This web app does that for you.
 
 Everything happens in your browser. Your images are never uploaded.
+
+![Screenshot of the web app](assets/screenshot.png)
 
 ## Usage
 
