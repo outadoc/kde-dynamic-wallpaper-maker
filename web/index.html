@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamic Wallpaper Creator</title>
+  <meta name="description" content="Create a KDE Plasma light/dark dynamic wallpaper from two images.">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Dynamic Wallpaper Creator</h1>
+      <p>Combine a light and a dark image into a KDE Plasma wallpaper that follows your color scheme.
+        Everything happens in your browser. Your images are never uploaded.</p>
+    </header>
+
+    <form id="form" novalidate>
+      <div class="fields">
+        <label>
+          <span>Name</span>
+          <input id="name" type="text" placeholder="My Wallpaper" required autocomplete="off">
+        </label>
+        <label>
+          <span>Author <small>(optional)</small></span>
+          <input id="author" type="text" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="pickers">
+        <label class="picker" data-variant="light">
+          <span class="picker-title">Light</span>
+          <span class="drop">
+            <span class="placeholder">Drop an image here<br><small>or click to choose</small></span>
+          </span>
+          <span class="info"></span>
+          <input type="file" accept="image/*" hidden>
+        </label>
+        <label class="picker" data-variant="dark">
+          <span class="picker-title">Dark</span>
+          <span class="drop">
+            <span class="placeholder">Drop an image here<br><small>or click to choose</small></span>
+          </span>
+          <span class="info"></span>
+          <input type="file" accept="image/*" hidden>
+        </label>
+      </div>
+
+      <p id="error" class="error" role="alert" hidden></p>
+      <button id="create" type="submit">Download wallpaper</button>
+    </form>
+
+    <section class="install">
+      <h2>Installing</h2>
+      <p>Install the downloaded archive with:</p>
+      <pre><code>kpackagetool6 -t Wallpaper/Images -i <span id="zip-name">My-Wallpaper</span>.zip</code></pre>
+      <p>Or extract it into <code>~/.local/share/wallpapers/</code>. Then pick it in
+        <em>Desktop and Wallpaper</em> settings.</p>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

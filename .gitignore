@@ -1,0 +1,16 @@
+# Node / Vite
+node_modules/
+dist/
+*.local
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Editors & OS
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
